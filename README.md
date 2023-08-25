@@ -9,9 +9,12 @@ This React application, ToolTipSetting, provides a user-friendly interface for c
 
 ### `Features`
 
-Customize tooltip appearance, including text size, padding, colors, and more. <br/>
-Render tooltips on different buttons with distinct styles. <br/>
-Extra functionalties: Upload and display images within tooltips. 
+1. Customize tooltip appearance, including text size, padding, colors, and more. <br/>
+2. Render tooltips on different buttons with distinct styles. <br/>
+3. Extra functionalties: Upload and display images within tooltips. <br/>
+4. Dynamic Target Selection <br/>
+5. Real-time Preview <br/>
+6. Color Personalization
 
 ### `Additional Feature: "IMAGE UPLOAD" on Tooltip`
 
