@@ -6,10 +6,8 @@ import "./Column2nd.css";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
 
-
 function ToolTipSetting() {
-
-  // PRE-REQUISITE -- 1
+  // BUTTON-CONFIGURATION -- 1
   // State Declaration: tooltipConfig
   // Properties for customizing the appearance and behavior of the tooltip
 
@@ -25,27 +23,33 @@ function ToolTipSetting() {
     tooltipHeight: 45,
     arrowWidth: 10,
     arrowHeight: 10,
+    tooltipImage: "",
   });
 
-  // PRE-REQUISITE -- 2
+  // BUTTON-CONFIGURATION -- 2
   const buttons = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5"];
 
-  // PRE-REQUISITE -- 3
+  // BUTTON-CONFIGURATION -- 3
   const handleInputChange = (event, property) => {
     const value = event.target.value;
     setTooltipConfig((prevConfig) => ({ ...prevConfig, [property]: value }));
   };
 
-
   return (
     <div>
-
+      {/* Header */}
       <Header />
 
       <div className="row_outer">
+        {/* Ist PART */}
+        {/* 
+            It includes various rows of input fields and labels for customizing aspects 
+            such as the target element, tooltip text, dimensions, colors, corner 
+            radius, and arrow dimensions.
+        */}
+
         <div className="outerbox column_outer">
-          
-          {/* First Row */}
+          {/* First Row -- FOR FORM */}
 
           <div className="column">
             <label htmlFor="targetElement">Target Element:</label>
@@ -63,7 +67,7 @@ function ToolTipSetting() {
             </select>
           </div>
 
-          {/* Second Row */}
+          {/* Second Row -- FOR FORM */}
 
           <div className="column">
             <label htmlFor="tooltipText">Tooltip Text:</label>
@@ -76,7 +80,7 @@ function ToolTipSetting() {
             />
           </div>
 
-          {/* Third Row */}
+          {/* Third Row -- FOR FORM */}
 
           <div className="container">
             <div className="column">
@@ -100,7 +104,7 @@ function ToolTipSetting() {
             </div>
           </div>
 
-          {/* Fourth Row */}
+          {/* Fourth Row -- FOR FORM */}
 
           <div className="column">
             <label htmlFor="textColor">Text Colour:</label>
@@ -112,7 +116,7 @@ function ToolTipSetting() {
             />
           </div>
 
-          {/* Fifth Row */}
+          {/* Fifth Row -- FOR FORM */}
 
           <div className="column">
             <label htmlFor="backgroundColor">Background Colour:</label>
@@ -124,7 +128,7 @@ function ToolTipSetting() {
             />
           </div>
 
-          {/* Sixth Row */}
+          {/* Sixth Row -- FOR FORM */}
 
           <div className="container">
             <div className="column">
@@ -148,7 +152,7 @@ function ToolTipSetting() {
             </div>
           </div>
 
-          {/* Seventh Row */}
+          {/* Seventh Row -- FOR FORM */}
 
           <div className="container">
             <div className="column">
@@ -171,7 +175,40 @@ function ToolTipSetting() {
               />
             </div>
           </div>
+
+          {/* Eighth Row -- FOR FORM */}
+
+          <div className="column">
+            <label htmlFor="tooltipImage">
+              <i class="fa fa-heart"></i>
+              <span
+                style={{
+                  color: "red",
+                  fontWeight: "extrabold",
+                  fontSize: "16px",
+                }}
+              >
+                {" "}
+                TOOLTIP IMAGE URL:
+              </span>{" "}
+              (*Additional Feature*)
+            </label>
+            <input
+              type="text"
+              id="tooltipImage"
+              value={tooltipConfig.tooltipImage}
+              onChange={(e) => handleInputChange(e, "tooltipImage")}
+              className="box_width"
+            />
+          </div>
         </div>
+
+        {/* IInd PART */}
+        {/*  
+            Each button's appearance is customized using tooltipConfig settings, 
+            including dimensions, colors, and text styling. 
+            A tooltip with specified dimensions and content is displayed. 
+        */}
 
         <div className="column_outer2">
           <div className="outer_mobile_screen">
@@ -215,6 +252,14 @@ function ToolTipSetting() {
                     }}
                   >
                     {tooltipConfig.tooltipText}
+                    {tooltipConfig.tooltipImage && (
+                      <div className="tooltip-image">
+                        <img
+                          src={tooltipConfig.tooltipImage}
+                          alt="Tooltip Image"
+                        />
+                      </div>
+                    )}
                   </div>
                 </button>
               ))}
@@ -223,8 +268,8 @@ function ToolTipSetting() {
         </div>
       </div>
 
-    <Footer />
-      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
