@@ -1,7 +1,18 @@
-import "./ToolTipSetting.css";
 import React, { useState } from "react";
+import "./ToolTipSetting.css";
+import "./Column1st.css";
+import "./Column2nd.css";
+
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
+
 
 function ToolTipSetting() {
+
+  // PRE-REQUISITE -- 1
+  // State Declaration: tooltipConfig
+  // Properties for customizing the appearance and behavior of the tooltip
+
   const [tooltipConfig, setTooltipConfig] = useState({
     targetElement: "Button 1",
     tooltipText: "Tooltip Text",
@@ -16,31 +27,26 @@ function ToolTipSetting() {
     arrowHeight: 10,
   });
 
+  // PRE-REQUISITE -- 2
   const buttons = ["Button 1", "Button 2", "Button 3", "Button 4", "Button 5"];
 
+  // PRE-REQUISITE -- 3
   const handleInputChange = (event, property) => {
     const value = event.target.value;
     setTooltipConfig((prevConfig) => ({ ...prevConfig, [property]: value }));
   };
 
-  //   const [selectedButton, setSelectedButton] = useState(buttonIds[0]);
-  //   const [width, setWidth] = useState("");
-  //   const [height, setHeight] = useState("");
-  //   const [color, setColor] = useState("#ffffff");
-
-  //   const handleButtonSelect = (event) => {
-  //     setSelectedButton(event.target.value);
-  //   };
 
   return (
     <div>
-      <div className="header">
-        <p>20BBS0055 <i className="">Ayush Verma</i> ~ Final year B Tech CSE student</p>
-      </div>
+
+      <Header />
 
       <div className="row_outer">
         <div className="outerbox column_outer">
+          
           {/* First Row */}
+
           <div className="column">
             <label htmlFor="targetElement">Target Element:</label>
             <select
@@ -58,6 +64,7 @@ function ToolTipSetting() {
           </div>
 
           {/* Second Row */}
+
           <div className="column">
             <label htmlFor="tooltipText">Tooltip Text:</label>
             <input
@@ -70,6 +77,7 @@ function ToolTipSetting() {
           </div>
 
           {/* Third Row */}
+
           <div className="container">
             <div className="column">
               <label htmlFor="textSize">Text Size:</label>
@@ -93,6 +101,7 @@ function ToolTipSetting() {
           </div>
 
           {/* Fourth Row */}
+
           <div className="column">
             <label htmlFor="textColor">Text Colour:</label>
             <input
@@ -104,6 +113,7 @@ function ToolTipSetting() {
           </div>
 
           {/* Fifth Row */}
+
           <div className="column">
             <label htmlFor="backgroundColor">Background Colour:</label>
             <input
@@ -115,6 +125,7 @@ function ToolTipSetting() {
           </div>
 
           {/* Sixth Row */}
+
           <div className="container">
             <div className="column">
               <label htmlFor="cornerRadius">Corner Radius:</label>
@@ -138,6 +149,7 @@ function ToolTipSetting() {
           </div>
 
           {/* Seventh Row */}
+
           <div className="container">
             <div className="column">
               <label htmlFor="arrowWidth">Arrow Width:</label>
@@ -211,12 +223,8 @@ function ToolTipSetting() {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="footer">
-        <p>
-          Made with <i class="fa fa-heart"></i> by Ayush Verma{" "}
-        </p>
-      </div>
+    <Footer />
+      
     </div>
   );
 }

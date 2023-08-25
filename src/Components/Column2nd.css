@@ -1,0 +1,92 @@
+
+.outer_mobile_screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38rem; /* Adjust the height as needed */
+    /* background-color: #f0f0f0; */
+    position: relative;
+  }
+
+.mobile-screen {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 18px solid #161616;
+    background-color: #cfcfcf;
+    height: 38rem;
+    width: 21rem;
+    border-radius: 33px;
+  }
+  
+  .mobile-screen button {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .corner-button {
+    position: absolute;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    border: none;
+    color: #000;
+}
+
+.tooltip {
+    position: absolute;
+    /* bottom: 100%; */
+    left: -2px;
+    transform: translateX(-50%);
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    z-index: 1;
+    display: none;
+  }
+  
+  .top-left .tooltip,
+.top-right .tooltip,
+.center-button .tooltip {
+  top: 90px;
+  transform: translateY(-100%);
+}
+
+.bottom-left .tooltip,
+.bottom-right .tooltip {
+  bottom: 100%;
+  left: 50%;
+}
+  
+  .corner-button:hover .tooltip {
+    display: block;
+  }
+  
+  
+  .top-left {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .top-right {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .bottom-left {
+    bottom: 10px;
+    left: 10px;
+  }
+  
+  .bottom-right {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .center-button {
+    z-index: 1;
+  }

@@ -1,0 +1,68 @@
+.column_outer {
+    float: left;
+    width: 50%;
+    padding-top: 35px;
+    padding-left:  70px;
+    height: 38rem;
+}
+
+.column_outer2 {
+    float: left;
+    width: 40%;
+    /* padding-top: 45px; */
+    padding-left:  60px;
+    height: 35rem;
+}
+
+.outerbox {
+    border: 1px solid #ccc;
+    padding: auto;
+    background-color: rgb(236, 236, 236);
+    border-radius: 25px;
+    width: 60%;
+}
+
+button, input, select {
+  color: rgb(159, 159, 159);
+}
+
+.below_box
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; 
+  }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 14px; /* Add some margin between columns */
+
+}
+
+.column > label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.box_width {
+    width: 42rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding-left: 7px;
+}
+
+.box_width_1 {
+    width: 19rem;
+    height: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-right: 3.8rem;
+    padding-left: 7px;
+}
