@@ -84,7 +84,8 @@ function ToolTipSetting() {
 
           <div className="container">
             <div className="column">
-              <label htmlFor="textSize">Text Size:</label>
+              <label htmlFor="textSize">Text Size:  (ex 
+              10 - 22)</label>
               <input
                 type="number"
                 value={tooltipConfig.textSize}
@@ -94,7 +95,8 @@ function ToolTipSetting() {
             </div>
 
             <div className="column">
-              <label htmlFor="padding">Padding:</label>
+              <label htmlFor="padding">Padding:  (ex 
+              10 - 20)</label>
               <input
                 type="number"
                 value={tooltipConfig.padding}
