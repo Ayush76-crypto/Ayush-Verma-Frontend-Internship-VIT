@@ -19,6 +19,7 @@
     height: 38rem;
     width: 21rem;
     border-radius: 33px;
+    overflow: hidden;
   }
   
   .mobile-screen button {

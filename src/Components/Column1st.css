@@ -23,7 +23,7 @@
 }
 
 button, input, select {
-  color: rgb(159, 159, 159);
+  color: rgb(183, 183, 183);
 }
 
 .below_box
@@ -65,5 +65,5 @@ button, input, select {
     border-radius: 4px;
     border: 1px solid #ccc;
     margin-right: 11.4rem;
-    padding-left: 7px;
+    /* padding-left: 7px; */
 }

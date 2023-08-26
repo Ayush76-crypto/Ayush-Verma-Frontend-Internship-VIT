@@ -191,7 +191,7 @@ function ToolTipSetting() {
                 {" "}
                 TOOLTIP IMAGE URL:
               </span>{" "}
-              (*Additional Feature*)
+              (*Additional Feature*) - <i>Paste your URL here</i>
             </label>
             <input
               type="text"
